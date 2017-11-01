@@ -1,14 +1,19 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Board Game Bonanza
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-list>
+    <ion-list-header color="primary" *ngFor="let item of items.listItems">
+      {{item.header}}
+      <ion-item color=light *ngFor="let name of item.items">
+        {{name.listName}}
+      </ion-item>
+    </ion-list-header>
+
+  </ion-list>
 </ion-content>
